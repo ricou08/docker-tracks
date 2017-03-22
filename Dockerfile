@@ -53,6 +53,8 @@ RUN tar -C /usr/local/bin -xzvf dockerize-linux-amd64-v0.0.4.tar.gz
 RUN chmod +x /usr/local/bin/dockerize
 RUN cd /var/www/ && chown -R www-data:www-data tracks
 
+ADD ./fr.yml /var/www/tracks/config/locales/
+
 VOLUME ["/var/www"]
 
 EXPOSE 80
